@@ -1,0 +1,17 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!--  Base application theme.  -->
+    <style name="Theme.ReGreen" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:navigationBarColor">@android:color/transparent</item>
+
+        <!-- Cho phép thanh trạng thái có văn bản màu đen (light mode) -->
+        <item name="android:windowLightStatusBar">true</item>
+
+        <!-- Cho phép thanh điều hướng có biểu tượng màu đen (light mode) -->
+        <item name="android:windowLightNavigationBar" tools:targetApi="o_mr1">true</item>
+
+<!--        <item name="android:windowTranslucentStatus">true</item>-->
+
+    </style>
+
+</resources>

@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission
+        android:name="android.permission.READ_EXTERNAL_STORAGE"
+        android:maxSdkVersion="32" />
+    <uses-permission
+        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        android:maxSdkVersion="28" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.ReGreen"
+        tools:targetApi="31">
+
+        <activity
+            android:name=".myapplication.SplashScreen1"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".myapplication.HowToRecycleActivity"
+            android:exported="false" />
+        <activity
+            android:name=".myapplication.User.Reward.ViewRewardDetailActivity"
+            android:exported="false" />
+        <activity
+            android:name=".myapplication.User.Reward.ListRewardActivity"
+            android:exported="true">
+
+        </activity>
+        <activity
+            android:name=".myapplication.User.News.ListNewActivity"
+            android:exported="false" />
+        <activity
+            android:name=".myapplication.ChangePassWord"
+            android:exported="false" />
+        <activity
+            android:name=".myapplication.User.News.ViewNewDetailActivity"
+            android:exported="false" />
+        <activity
+            android:name=".myapplication.Admin.Recycle.RecycleManagerActivity"
+            android:exported="true">
+
+        </activity>
+        <activity
+            android:name=".myapplication.Admin.AccessPoint.AccessPointManagerActivity"
+            android:exported="true" />
+        <activity
+            android:name=".myapplication.ForgotPassWord"
+            android:exported="false" />
+        <activity
+            android:name=".myapplication.Login"
+            android:exported="true">
+
+        </activity>
+        <activity
+            android:name=".myapplication.Admin.Booking.BookingManagerActivity"
+            android:exported="true" />
+        <activity
+            android:name=".myapplication.Admin.Reward.RewardManagerActivity"
+            android:exported="true" />
+        <activity
+            android:name=".myapplication.RecivingPoint"
+            android:exported="false" />
+        <activity
+            android:name=".myapplication.Admin.New.NewManagerActivity"
+            android:exported="true" />
+        <activity
+            android:name=".myapplication.MainActivity"
+            android:exported="true" />
+        <activity
+            android:name=".myapplication.WasteIdentification"
+            android:exported="true" />
+        <activity
+            android:name=".myapplication.User.UserBooking"
+            android:exported="true" />
+        <activity
+            android:name=".myapplication.LearnMore"
+            android:exported="true" />
+
+        <activity
+            android:name=".myapplication.EditProfile"
+            android:exported="false" />
+        <activity
+            android:name=".myapplication.SignIn"
+            android:exported="true" />
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyBlsvRvNWvQAOBx0p2MeSV-QdK9xs_KLNM" />
+    </application>
+
+</manifest>

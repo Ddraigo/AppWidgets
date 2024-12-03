@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/home"
+        android:icon="@drawable/home_outline"
+        android:title="Home" />
+
+    <item
+        android:id="@+id/activity"
+        android:icon="@drawable/baseline_history_24"
+        android:title="Activity" />
+
+    <item
+        android:id="@+id/scaner"
+        android:title=""
+        android:enabled="false"/>
+
+    <item
+        android:id="@+id/reward"
+        android:icon="@drawable/baseline_card_giftcard_24"
+        android:title="Reward" />
+
+    <item
+        android:id="@+id/profile"
+        android:icon="@drawable/img_outlined_profile"
+        android:title="Profile" />
+
+</menu>

@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context=".myapplication.User.Reward.ViewRewardDetailActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView3"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:minHeight="70dp"
+            app:cardElevation="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:id="@+id/btnBackUserRewardDetail"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_gravity="left|center_vertical"
+                    android:layout_marginStart="16dp"
+                    android:background="@drawable/baseline_arrow_back_ios_new_24"
+                    android:backgroundTint="#8B8C8E"
+                    android:clickable="true"
+                    android:foreground="?attr/selectableItemBackground" />
+
+            </LinearLayout>
+
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="32dp"
+            android:layout_weight="1"
+            android:fillViewport="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/rewardImage"
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@color/white"
+                    android:src="@drawable/eco_friendly_gifts_l" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:elevation="2dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_ViewTitle2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginRight="16dp"
+                        android:fontFamily="@font/nunito_extrabold"
+                        android:text="Túi tote"
+                        android:textSize="30sp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginTop="2dp"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/imageView2"
+                            android:layout_width="50dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            app:srcCompat="@drawable/img_leaf" />
+
+                        <TextView
+                            android:id="@+id/rewardPoints"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="8dp"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/nunito_extrabold"
+                            android:text="100"
+                            android:textSize="24sp" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/rewardDate"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="16dp"
+                        android:fontFamily="@font/albert_sans_medium"
+                        android:gravity="right"
+                        android:text="Ngày đăng: 09/11/2024"
+                        android:textSize="22sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/rewardContent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-medium"
+                    android:padding="8dp"
+                    android:text="TP.HCM sẽ triển khai 5 nhóm giải pháp nhằm từng bước cải thiện chất lượng môi trường, thích ứng với biến đổi khí hậu và hướng tới đạt được các mục tiêu phát triển bền vững đến năm 2030. Ngày 9.11, Báo Tuổi Trẻ phối hợp Hội Liên hiệp Thanh niên Việt Nam TP.HCM và Liên minh Tái chế bao bì Việt Nam (PRO VN) tổ chức khai mạc Ngày hội Việt Nam Xanh 2024.  Với chủ đề &quot;Tiết giảm - Tái sử dụng - Tái chế&quot; và khẩu hiệu &quot;Make green together&quot;, ngày hội mong muốn kêu gọi các tổ chức, cá nhân cùng cộng đồng doanh nghiệp chung tay hành động từ những điều nhỏ nhất, tiết kiệm và tái sử dụng những vật dụng có thể tái chế, góp phần giảm phát thải ra môi trường. Diễn ra từ ngày 9 - 10.11, Ngày hội Việt Nam Xanh dự kiến đón từ 5.000 - 10.000 ngàn lượt khách đến trải nghiệm, tham quan không gian trưng bày các giải pháp, mô hình, sản phẩm xanh, hướng tới phát triển bền vững của các doanh nghiệp tham gia ngày hội.   Bên cạnh đó, ngày hội còn có các chương trình talkshow giao lưu, chia sẻ về vấn đề phân loại rác, bảo vệ môi trường như &quot;Rác phân loại đúng, rác là tài nguyên&quot;, &quot;Doanh nghiệp và giải pháp phát triển bền vững&quot;…  Tại lễ khai mạc, ông Huỳnh Thanh Nhân, Phó chủ tịch HĐND TP.HCM cho biết, TP.HCM là trung tâm kinh tế, văn hóa và khoa học kỹ thuật lớn nhất Việt Nam với hơn 10 triệu dân, nhưng cũng là nơi phải đối mặt với nhiều vấn đề môi trường nghiêm trọng. Cấp bách nhất có thể kể đến như ô nhiễm không khí do bụi mịn, ô nhiễm nước, ô nhiễm rác thải… Ngoài ra, TP.HCM còn đối mặt với những vấn đề khác như rác thải nhựa, biến đổi khí hậu và suy giảm tài nguyên."
+                    android:textSize="24sp" />
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+    </LinearLayout>
+</FrameLayout>

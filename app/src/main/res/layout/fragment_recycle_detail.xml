@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="700dp"
+    android:layout_gravity="bottom"
+    android:background="@drawable/drawable_shape_1"
+    android:backgroundTint="@color/white"
+    tools:context=".myapplication.Admin.Recycle.RecycleDetailFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_marginTop="32dp"
+        android:layout_weight="1"
+        android:elevation="2dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/topbar3"
+        app:layout_constraintVertical_bias="1.0">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:fontFamily="@font/nunito_bold"
+                android:gravity="center_horizontal|left"
+                android:includeFontPadding="false"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:text="Chi tiết phân loại"
+                android:textSize="30sp" />
+
+            <Button
+                android:id="@+id/btnDeleteRecycle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#F5F5F5"
+                android:text="Xóa"
+                android:textColor="#666464"
+                app:cornerRadius="20dp"
+                app:strokeColor="#4D262626"
+                app:strokeWidth="1dp" />
+        </LinearLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:layout_weight="1"
+            android:paddingBottom="8dp"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="16dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:fontFamily="@font/poppins_semibold"
+                        android:text="Phân loại"
+                        android:textSize="18sp" />
+
+                    <Spinner
+                        android:id="@+id/edtRecycleCategory"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:autofillHints=""
+                        android:background="@drawable/container_text_field1"
+                        android:backgroundTint="@color/white"
+                        android:drawableEnd="@drawable/baseline_arrow_drop_down_24"
+                        android:elevation="4dp"
+                        android:ems="10"
+                        android:focusableInTouchMode="false"
+                        android:hint="Chọn phân loại"
+                        android:inputType="text"
+                        android:minHeight="50dp"
+                        android:padding="10dp"
+                        android:textSize="20sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="16dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:fontFamily="@font/poppins_semibold"
+                        android:text="Có phải tái chế?"
+                        android:textSize="18sp" />
+
+                    <Spinner
+                        android:id="@+id/edtIsRecycle"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:autofillHints=""
+                        android:background="@drawable/container_text_field1"
+                        android:backgroundTint="@color/white"
+                        android:drawableEnd="@drawable/baseline_arrow_drop_down_24"
+                        android:elevation="4dp"
+                        android:ems="10"
+                        android:focusableInTouchMode="false"
+                        android:hint="Nhấn chọn"
+                        android:inputType="text"
+                        android:minHeight="50dp"
+                        android:padding="10dp"
+                        android:textSize="20sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="16dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:fontFamily="@font/poppins_semibold"
+                        android:text="Tên loại rác"
+                        android:textSize="18sp" />
+
+                    <EditText
+                        android:id="@+id/edtRecycleName"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:autofillHints=""
+                        android:background="@drawable/container_text_field1"
+                        android:backgroundTint="@color/white"
+                        android:elevation="4dp"
+                        android:ems="10"
+                        android:hint="Nhập tên"
+                        android:inputType="number"
+                        android:minHeight="50dp"
+                        android:padding="10dp"
+                        android:textSize="20sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="16dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:fontFamily="@font/poppins_semibold"
+                        android:text="Thông tin chi tiết"
+                        android:textSize="18sp" />
+
+                    <EditText
+                        android:id="@+id/edtRecycleDetail"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:autofillHints=""
+                        android:background="@drawable/container_text_field1"
+                        android:backgroundTint="@color/white"
+                        android:elevation="4dp"
+                        android:ems="10"
+                        android:hint="Nhập nội dung"
+                        android:inputType="text|textLongMessage|textMultiLine"
+                        android:minHeight="50dp"
+                        android:padding="10dp"
+                        android:textSize="20sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="16dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:fontFamily="@font/poppins_semibold"
+                        android:text="Ảnh (nếu có)"
+                        android:textSize="18sp" />
+
+                    <ImageView
+                        android:id="@+id/imgEditRecycle"
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp"
+                        android:src="@drawable/_981712_scaled" />
+
+                    <Button
+                        android:id="@+id/btnEditPictureRecycle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:layout_weight="1"
+                        android:autofillHints=""
+                        android:backgroundTint="@color/white"
+                        android:drawableEnd="@drawable/baseline_photo_library_24"
+                        android:elevation="4dp"
+                        android:ems="10"
+                        android:gravity="left|center_vertical"
+                        android:hint="Chọn ảnh"
+                        android:inputType="text"
+                        android:minHeight="50dp"
+                        android:padding="10dp"
+                        android:textSize="20sp"
+                        app:cornerRadius="8dp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </ScrollView>
+
+        <Button
+            android:id="@+id/btnEditRecycle"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="32dp"
+            android:backgroundTint="@color/green_btn"
+            android:fontFamily="@font/nunito_extrabold"
+            android:text="Lưu chỉnh sửa"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            app:cornerRadius="20dp" />
+
+    </LinearLayout>
+</FrameLayout>
