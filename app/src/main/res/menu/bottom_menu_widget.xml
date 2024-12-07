@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/booking"
+        android:icon="@drawable/img_event_accepted"
+        android:title="Đặt lịch" />
+
+    <item
+        android:id="@+id/activity"
+        android:icon="@drawable/baseline_history_24"
+        android:title="Hoạt động" />
+
+    <item
+        android:id="@+id/taakePicture"
+        android:icon="@drawable/scan2"
+        android:title="Chụp ảnh" />
+
+    <item
+        android:id="@+id/reward"
+        android:icon="@drawable/baseline_card_giftcard_24"
+        android:title="Nhận thưởng" />
+
+    <item
+        android:id="@+id/location"
+        android:icon="@drawable/img_outlined_explore"
+        android:title="Địa điểm" />
+
+</menu>

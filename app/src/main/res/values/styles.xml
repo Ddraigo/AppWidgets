@@ -1,4 +1,5 @@
 <resources>
+
     <style name="SpinnerTimePickerDialog" parent="Theme.AppCompat.Light.Dialog">
         <item name="android:timePickerStyle">@style/SpinnerTimePicker</item>
     </style>
@@ -7,6 +8,15 @@
         <item name="android:timePickerMode">spinner</item>
     </style>
 
-    <style name="AnotherStyle">
+    <style name="AnotherStyle"></style>
+
+    <style name="Widget.ReGreen.AppWidget.Container" parent="android:Widget">
+        <item name="android:id">@android:id/background</item>
+        <item name="android:background">?android:attr/colorBackground</item>
+    </style>
+
+    <style name="Widget.ReGreen.AppWidget.InnerView" parent="android:Widget">
+        <item name="android:background">?android:attr/colorBackground</item>
+        <item name="android:textColor">?android:attr/textColorPrimary</item>
     </style>
 </resources>

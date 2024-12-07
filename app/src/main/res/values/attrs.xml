@@ -7,13 +7,6 @@
     <attr name="bottomLeftRadius" format="dimension" />
     <attr name="bottomRightRadius" format="dimension" />
 
-<!--    <declare-styleable name="CodiaRoundFlexboxLayout">-->
-<!--        <attr name="radius" />-->
-<!--        <attr name="topLeftRadius" />-->
-<!--        <attr name="topRightRadius" />-->
-<!--        <attr name="bottomLeftRadius" />-->
-<!--        <attr name="bottomRightRadius" />-->
-<!--    </declare-styleable>-->
 
     <declare-styleable name="CodiaRoundImageView">
         <attr name="radius" />
@@ -30,6 +23,12 @@
         <attr name="topRightRadius" />
         <attr name="bottomRightRadius" />
         <attr name="bottomLeftRadius" />
+    </declare-styleable>
+
+    <declare-styleable name="AppWidgetAttrs">
+        <attr name="appWidgetPadding" format="dimension" />
+        <attr name="appWidgetInnerRadius" format="dimension" />
+        <attr name="appWidgetRadius" format="dimension" />
     </declare-styleable>
 
 </resources>

@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:andoroid="http://schemas.android.com/apk/distribution"
     xmlns:tools="http://schemas.android.com/tools">
 
     <uses-permission
@@ -12,7 +13,7 @@
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.BROADCAST_STICKY"/>
 
     <application
         android:allowBackup="true"
@@ -25,6 +26,7 @@
         android:theme="@style/Theme.ReGreen"
         tools:targetApi="31">
 
+
         <activity
             android:name=".myapplication.SplashScreen1"
             android:exported="true">
@@ -34,7 +36,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
         <activity
             android:name=".myapplication.HowToRecycleActivity"
             android:exported="false" />
@@ -43,7 +44,7 @@
             android:exported="false" />
         <activity
             android:name=".myapplication.User.Reward.ListRewardActivity"
-            android:exported="true">
+            android:exported="false">
 
         </activity>
         <activity
@@ -57,26 +58,26 @@
             android:exported="false" />
         <activity
             android:name=".myapplication.Admin.Recycle.RecycleManagerActivity"
-            android:exported="true">
+            android:exported="false">
 
         </activity>
         <activity
             android:name=".myapplication.Admin.AccessPoint.AccessPointManagerActivity"
-            android:exported="true" />
+            android:exported="false" />
         <activity
             android:name=".myapplication.ForgotPassWord"
             android:exported="false" />
         <activity
             android:name=".myapplication.Login"
-            android:exported="true">
+            android:exported="false">
 
         </activity>
         <activity
             android:name=".myapplication.Admin.Booking.BookingManagerActivity"
-            android:exported="true" />
+            android:exported="false" />
         <activity
             android:name=".myapplication.Admin.Reward.RewardManagerActivity"
-            android:exported="true" />
+            android:exported="false" />
         <activity
             android:name=".myapplication.RecivingPoint"
             android:exported="false" />
@@ -95,7 +96,6 @@
         <activity
             android:name=".myapplication.LearnMore"
             android:exported="true" />
-
         <activity
             android:name=".myapplication.EditProfile"
             android:exported="false" />
@@ -109,6 +109,18 @@
         <meta-data
             android:name="com.google.android.geo.API_KEY"
             android:value="AIzaSyBlsvRvNWvQAOBx0p2MeSV-QdK9xs_KLNM" />
+
+        <receiver
+            android:name=".MyAppWidget"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/my_app_widget_info" />
+        </receiver>
     </application>
 
 </manifest>

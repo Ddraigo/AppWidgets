@@ -132,8 +132,8 @@ public class Login extends AppCompatActivity {
 
         }
 
-        // Initialize Google Sign-In
-        CreateRequest(); // Ensure you call this to initialize signInClient
+
+        CreateRequest();
 
         biding.btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -196,6 +196,12 @@ public class Login extends AppCompatActivity {
             Password.setText(sharedPreferences.getString("password", ""));
             checkBox.setChecked(true);
         }
+    }
+
+    private void saveUserName(String userName) {
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        editor.putString("user_name", userName);
+        editor.apply();
     }
 
     public void clearCredentials() {
@@ -284,15 +290,19 @@ public class Login extends AppCompatActivity {
                         DataSnapshot dataSnapshot = task.getResult();
                         String Password = String.valueOf(dataSnapshot.child("passWord").getValue());
                         String Email = String.valueOf(dataSnapshot.child("Email").getValue()).replace(".", ",");
+                        String userName = String.valueOf(dataSnapshot.child("name").getValue());
                         if (password.equals(Password) ) {
                             Toast.makeText(Login.this,"Đăng nhập thành công!",Toast.LENGTH_SHORT).show();
+
+                            saveUserName(userName);
+
                             if(checkBox.isChecked()){
                                 saveCredentials(email,password);
                             }
                             else {
                                 clearCredentials();
                             }
-                            String userEmail=email;
+                            String userEmail = email;
                             Intent intent= new Intent(Login.this,MainActivity.class);
                             intent.putExtra("userEmail",userEmail);
 
