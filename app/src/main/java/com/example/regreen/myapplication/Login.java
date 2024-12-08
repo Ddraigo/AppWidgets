@@ -1,5 +1,7 @@
 package com.example.regreen.myapplication;
 
+import android.appwidget.AppWidgetManager;
+import android.content.ComponentName;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.drawable.Drawable;
@@ -24,6 +26,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.res.ResourcesCompat;
 
 
+import com.example.regreen.MyAppWidget;
 import com.example.regreen.R;
 import com.example.regreen.databinding.ActivityLoginBinding;
 import com.example.regreen.databinding.ActivitySignInBinding;
@@ -59,7 +62,7 @@ public class Login extends AppCompatActivity {
     Session session;
 
     private SharedPreferences sharedPreferences;
-    private static final String PREF_NAME = "LoginPrefs";
+    public static final String PREF_NAME = "LoginPrefs";
 
     CheckBox checkBox;
     ImageButton LoginGg;
@@ -293,8 +296,10 @@ public class Login extends AppCompatActivity {
                         String userName = String.valueOf(dataSnapshot.child("name").getValue());
                         if (password.equals(Password) ) {
                             Toast.makeText(Login.this,"Đăng nhập thành công!",Toast.LENGTH_SHORT).show();
+//                            Toast.makeText(Login.this,userName,Toast.LENGTH_SHORT).show();
 
                             saveUserName(userName);
+
 
                             if(checkBox.isChecked()){
                                 saveCredentials(email,password);

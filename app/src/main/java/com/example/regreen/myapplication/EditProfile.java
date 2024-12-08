@@ -1,5 +1,6 @@
 package com.example.regreen.myapplication;
 
+import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Bitmap;
@@ -25,6 +26,7 @@ import com.example.regreen.myapplication.Admin.GenericMethod.FirebaseImageHelper
 import com.example.regreen.myapplication.Admin.GenericMethod.FirebaseRepository;
 
 import com.example.regreen.myapplication.ModelData.User;
+import com.example.regreen.myapplication.User.UserBooking;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -37,6 +39,7 @@ public class EditProfile extends AppCompatActivity {
     private FirebaseRepository<User> userRepository;
     private FirebaseImageHelper imageHelper;
     private String base64Avatar;
+    private SharedPreferences sharedPreferences;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,8 +48,11 @@ public class EditProfile extends AppCompatActivity {
 
         getWindow().setStatusBarColor(getResources().getColor(R.color.green_bg, null));
 
+        sharedPreferences = EditProfile.this.getSharedPreferences(Login.PREF_NAME, Context.MODE_PRIVATE);
+        String userName = sharedPreferences.getString("user_name", "Guest");
+        
         String userEmail = getIntent().getStringExtra("userEmail");
-        if (userEmail == null) {
+        if (userEmail == null && userName == null) {
             Toast.makeText(this, "Không thể xác định người dùng đăng nhập!", Toast.LENGTH_SHORT).show();
             finish();
             return;
@@ -73,6 +79,12 @@ public class EditProfile extends AppCompatActivity {
         btnBackEditProfile.setOnClickListener(v -> finish());
     }
 
+    private void saveUserName(String userName) {
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        editor.putString("user_name", userName);
+        editor.apply();
+    }
+
 
     private void loadUserProfile(String userEmail) {
 
@@ -81,6 +93,8 @@ public class EditProfile extends AppCompatActivity {
             finish();
             return;
         }
+
+        
 
         String emailPath = userEmail.replace(".", ",");
         userRepository.get(emailPath, new FirebaseRepository.OnFetchListener<User>() {
@@ -134,6 +148,13 @@ public class EditProfile extends AppCompatActivity {
             @Override
             public void onSuccess(String message) {
                 Toast.makeText(EditProfile.this, "Hồ sơ đã được cập nhật thành công!", Toast.LENGTH_SHORT).show();
+                saveUserName(name);
+
+                // Gửi broadcast để widget cập nhật lại
+                Intent intent = new Intent("com.example.regreen.USER_PROFILE_UPDATED");
+                sendBroadcast(intent);
+
+                finish();
             }
 
             @Override

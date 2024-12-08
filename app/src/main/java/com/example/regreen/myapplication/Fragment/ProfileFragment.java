@@ -97,6 +97,18 @@ public class ProfileFragment extends Fragment {
         return view;
     }
 
+    @Override
+    public void onResume() {
+        super.onResume();
+        // Khi quay lại ProfileFragment, tải lại thông tin người dùng
+        if (getArguments() != null) {
+            String userEmail = getArguments().getString("userEmail");
+            if (userEmail != null) {
+                loadUserProfile(userEmail);
+            }
+        }
+    }
+
 
     private void loadUserProfile(String userEmail) {
         String emailPath = userEmail.replace(".", ",");

@@ -2,6 +2,7 @@ package com.example.regreen.myapplication.User;
 
 import android.app.DatePickerDialog;
 import android.app.TimePickerDialog;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -28,6 +29,7 @@ import com.bumptech.glide.Glide;
 import com.example.regreen.R;
 import com.example.regreen.myapplication.Admin.GenericMethod.FirebaseImageHelper;
 import com.example.regreen.myapplication.Admin.GenericMethod.FirebaseRepository;
+import com.example.regreen.myapplication.Login;
 import com.example.regreen.myapplication.ModelData.AccessPoint;
 import com.example.regreen.myapplication.ModelData.Booking;
 import com.example.regreen.myapplication.ModelData.User;
@@ -69,8 +71,11 @@ public class UserBooking extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_booking);
 
+        SharedPreferences sharedPreferences = UserBooking.this.getSharedPreferences(Login.PREF_NAME, Context.MODE_PRIVATE);
+        String userName = sharedPreferences.getString("user_name", "Guest");
+
         String userEmail = getIntent().getStringExtra("userEmail");
-        if (userEmail == null) {
+        if (userEmail == null && userName == null) {
             Toast.makeText(this, "Không thể xác định người dùng đăng nhập!", Toast.LENGTH_SHORT).show();
             finish();
             return;
